@@ -9,7 +9,7 @@ OBJECTS := $(patsubst src/%.c,$(BUILD)/%.o,$(SOURCES))
 DEPENDENCIES := $(OBJECTS:.o=.d)
 
 ARCH_FLAGS := -mcpu=cortex-a9 -marm -mfloat-abi=soft
-CPPFLAGS := -Iinclude
+CPPFLAGS := -Iinclude -I../../kernel/include
 CFLAGS := $(ARCH_FLAGS) -ffreestanding -fno-builtin -fdata-sections \
 	-ffunction-sections -fno-stack-protector -std=c11 -Wall -Wextra -Werror -MMD -MP
 
