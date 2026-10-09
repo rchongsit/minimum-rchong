@@ -22,7 +22,7 @@ DEPENDENCIES := $(OBJECTS:.o=.d)
 
 ARCH_FLAGS := -mcpu=cortex-a9 -marm -mfloat-abi=soft
 CPPFLAGS := -Iinclude
-CFLAGS := $(ARCH_FLAGS) \
+CFLAGS := -O2 $(ARCH_FLAGS) \
 	-ffreestanding \
 	-fno-builtin \
 	-fdata-sections \
